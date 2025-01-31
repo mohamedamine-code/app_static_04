@@ -27,115 +27,98 @@ class login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 43, 43, 43),
-        title: Text(
-          "Login",
-          style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
+        backgroundColor: Colors.grey[800],
+        appBar: AppBar(
+          backgroundColor: const Color.fromARGB(255, 43, 43, 43),
+          title: Text(
+            "Carte ID",
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
           ),
+          centerTitle: true,
         ),
-        centerTitle: true,
-        leading: IconButton(
-          onPressed: () {},
-          icon: Icon(
-            Icons.face_retouching_natural,
-            color: Colors.white,
-            size: 30,
-          ),
-        ),
-      ),
-      body: Container(
-        color: const Color.fromARGB(255, 33, 32, 32),
-        width: double.infinity,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        body: Column(
           children: [
-            Center(
-              child: Container(
-                width: 200,
-                height: 200,
-                margin: EdgeInsets.only(top: 20,bottom: 20),
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(
-                    color: Colors.white,
-                  ),
-                ),
-                child: ClipOval(
-                  child: Image.asset(
-                    "assets/img/img1.jpg",
-                    fit: BoxFit.cover,
-                  ),
-                ),
+            Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(
+                  color: Colors.white,
+                  
+                )
+              ),
+              margin: EdgeInsets.only(top: 30, bottom: 50),
+              child: CircleAvatar(
+                radius: 90,
+                backgroundImage: AssetImage("assets/img/img1.jpg"),
               ),
             ),
-
-
-            Padding(
-              padding: const EdgeInsets.only(left: 5),
-              child: Container(
-                padding: EdgeInsets.all(15),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Username : ",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 25,
-                      ),
+            Container(
+              margin: EdgeInsets.only(left: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Username :",
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     ),
-                    Text(
-                      "Mohamed Amine",
-                      style: TextStyle(
-                        color: const Color.fromARGB(255, 216, 198, 0),
-                        fontSize: 18,
-                      ),
+                  ),
+                  Text(
+                    "Mohamed Amine ",
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.amberAccent,
                     ),
-                    Text(
-                      "My Age :",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 25,
-                      ),
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Text(
+                    "Level in Flutter :",
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     ),
-                    Text(
-                      "20",
-                      style: TextStyle(
-                        color: const Color.fromARGB(255, 216, 198, 0),
-                        fontSize: 18,
-                      ),
+                  ),
+                  Text(
+                    "BEGINNER",
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.amberAccent,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          "assets/img/icons8-email-96.png",
-                          width: 30,
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Row(
+                    children: [
+                      Icon(Icons.email,color: Colors.white,),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Text(
+                        "mohamedamine.bennssir@isimg.tn",
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.amberAccent,
                         ),
-                        SizedBox(
-                          width: 30,
-                        ),
-                        Text(
-                          "mohamedAmine.bennssie@isimg.tn",
-                            style: TextStyle(
-                        color: const Color.fromARGB(255, 216, 198, 0),
-                        fontSize: 11,
                       ),
-                        )
-                      ],
-                    )
-                  ],
-                ),
+                    ],
+                  )
+                ],
               ),
-            ),
+            )
           ],
-        ),
-      ),
-    );
+        ));
   }
 }
